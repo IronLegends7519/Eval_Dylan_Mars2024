@@ -6,7 +6,6 @@ const métier = document.querySelector('#métier')
 const texte = document.querySelector('#texte')
 
 const tableauImage = [{
-    id:1, 
     image:'./images/image-tanya.jpg', 
     name:'Tanya Sinclar',
     alt:"Tanya Sinclar - UX Engineer",
@@ -14,7 +13,6 @@ const tableauImage = [{
     text:`La programmation m'intéressait depuis un certain temps mais je n’avais jamais sauté le pas. Ce cours a été une révélation pour moi. Il m’a permis d’obtenir le job de mes rêves.`
 },
 {
-    id:2, 
     image:'./images/image-john.jpg', 
     name:'John Tarkpor',
     alt:"John Tarkpor- Junior Front-end developer",
@@ -22,7 +20,6 @@ const tableauImage = [{
     text:'Si vous souhaitez poser les meilleures bases possibles, je vous recommande de suivre ce cours. Il m’a aidé à prendre confiance en moi et à devenir un meilleur développeur.'
 },
 {
-    id:3, 
     image:'./images/image-bob.jpg', 
     name:'Bob Razvoski',
     alt:"Bob Razvoski- Junior Back-end developer",
@@ -30,7 +27,6 @@ const tableauImage = [{
     text: 'Si vous souhaitez poser les meilleures bases possibles, je vous recommande de suivre ce cours. Il m’a aidé à prendre confiance en moi et à devenir un meilleur développeur.'
 },
 {
-    id:4, 
     image:'./images/image-toto.jpg', 
     name:'Toto',
     alt:"Toto- Developer",
@@ -80,11 +76,15 @@ function modifierHtml (){
 
     function previousFunction(){
         index--
+        
         if(index === -1){
             index=tableauImage.length-1
         }
-        modifierHtml ()
+
+        modifierHtml()
+
         clearInterval(interval)
+
         interval = setInterval(()=>{
             index++
             modifierHtml()
@@ -93,8 +93,11 @@ function modifierHtml (){
 
     function nextFunction (){
         index++
-        modifierHtml ()
+
+        modifierHtml()
+    
         clearInterval(interval)
+        
         interval = setInterval(()=>{
             index++
             modifierHtml()
