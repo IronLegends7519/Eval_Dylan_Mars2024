@@ -30,11 +30,11 @@ function greetings(isStudent) {
     if(isStudent){
         result='bienvenue cher élève'
     }
-     return result
+     console.log(result)
 }
 
-console.log(greetings(true)) // Bienvenue cher élève
-console.log(greetings(false)) // Bienvenue cher parent
+greetings(true) // Bienvenue cher élève
+greetings(false) // Bienvenue cher parent
 
 
 
@@ -48,11 +48,11 @@ function checkWord(word) {
     if(word.length < 3){
         result = 'Ce mot est trop court'
     }
-    return result
+    console.log(result)
 }
 
-console.log(checkWord("qw")) // Ce mot est trop court
-console.log(checkWord("pizza")) // Le mot pizza est tout à fait correct
+checkWord("qw") // Ce mot est trop court
+checkWord("pizza") // Le mot pizza est tout à fait correct
 
 
 
