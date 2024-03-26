@@ -12,11 +12,11 @@ function isString(myString) {
     if(typeof myString === "string"){
         result = true
     }
-    console.log(result)
+    return result
 }
 
-isString("Marc") // true
-isString(2) // false
+console.log(isString("Marc")) // true
+console.log(isString(2)) // false
 
 
 
@@ -26,16 +26,15 @@ isString(2) // false
 
 // JavaScript
 function greetings(isStudent) {
+    let result = 'Bienvenue cher parent'
     if(isStudent){
-        console.log('bienvenue cher élève')
+        result='bienvenue cher élève'
     }
-    else{
-        console.log('Bienvenue cher parent')
-    }
+     return result
 }
 
-greetings(true) // Bienvenue cher élève
-greetings(false) // Bienvenue cher parent
+console.log(greetings(true)) // Bienvenue cher élève
+console.log(greetings(false)) // Bienvenue cher parent
 
 
 
@@ -45,16 +44,15 @@ greetings(false) // Bienvenue cher parent
 
 
 function checkWord(word) {
+    let result=`le mot ${word} est tout à fait correct`
     if(word.length < 3){
-        console.log('Ce mot est trop court')
+        result = 'Ce mot est trop court'
     }
-    else{
-        console.log(`le mot ${word} est tout à fait correct`)
-    }
+    return result
 }
 
-checkWord("qw") // Ce mot est trop court
-checkWord("pizza") // Le mot pizza est tout à fait correct
+console.log(checkWord("qw")) // Ce mot est trop court
+console.log(checkWord("pizza")) // Le mot pizza est tout à fait correct
 
 
 
@@ -65,10 +63,10 @@ checkWord("pizza") // Le mot pizza est tout à fait correct
 
 function makeSum(number1, number2) {
     let result = number1 + number2
-    console.log(result)
+    return result
 }
 
-makeSum(2, 3) // Retourne 5
+console.log(makeSum(2, 3)) // Retourne 5
 
 
 
@@ -82,10 +80,10 @@ function makeSumFromArray(numbers) {
     for(let i =0;i<numbers.length;i++){
         result += numbers[i]
     }
-    console.log(result)
+    return result
 }
 
-makeSumFromArray([1, 2, 3, 5]) // Retourne 11
+console.log(makeSumFromArray([1, 2, 3, 5])) // Retourne 11
 
 
 
@@ -101,10 +99,10 @@ function findOddNumbers(numbers) {
             result.push(numbers[i])
         }
     }
-    console.log(result)
+    return result
 }
 
-findOddNumbers([1, 2, 5, 7, 8, 11, 13, 16, 19, 20, 21]) // [1, 5, 7, 11, 13, 19, 21]
+console.log(findOddNumbers([1, 2, 5, 7, 8, 11, 13, 16, 19, 20, 21])) // [1, 5, 7, 11, 13, 19, 21]
 
 
 
@@ -120,10 +118,10 @@ function filterArray(myArray) {
             result.push(myArray[i])
         }
     }
-    console.log(result)
+    return result
 }
 
-filterArray([1, 2, true, "Tom", "Max", false, 4, 5, 6, "John"]) // [1, 2, 4, 5, 6]
+console.log(filterArray([1, 2, true, "Tom", "Max", false, 4, 5, 6, "John"])) // [1, 2, 4, 5, 6]
 
 
 
@@ -137,10 +135,10 @@ function concatString(arrayOfStrings) {
     for(let i =0;i<arrayOfStrings.length;i++){
         result += arrayOfStrings[i]
     }
-    console.log(result)
+    return result
 }
 
-concatString(["Un", " ", "code", " ", "de", " ", "qualité"]) // "Un code de qualité"
+console.log(concatString(["Un", " ", "code", " ", "de", " ", "qualité"])) // "Un code de qualité"
 
 
 
@@ -156,11 +154,11 @@ function findElementByWord(arrayOfStrings, term) {
             result = true
         }
     }
-    console.log(result)
+    return result
 }
 
-findElementByWord(["max", "peter", "john"], "peter") // true
-findElementByWord(["max", "peter", "john"], "tom") // false
+console.log(findElementByWord(["max", "peter", "john"], "peter")) // true
+console.log(findElementByWord(["max", "peter", "john"], "tom")) // false
 
 
 
@@ -174,9 +172,9 @@ function lowerCaseWords(arrayOfStrings) {
     for(let i = 0;i<arrayOfStrings.length;i++){
         result.push(arrayOfStrings[i].toLowerCase())
     }
-    console.log(result)
+    return result
 }
-lowerCaseWords(["uN", " jOLI", " CheVAl ", "BlANc"]) // ["un", " joli", " cheval ", "blanc"]
+console.log(lowerCaseWords(["uN", " jOLI", " CheVAl ", "BlANc"])) // ["un", " joli", " cheval ", "blanc"]
 
 
 
@@ -193,10 +191,10 @@ function mergeArray(array1, array2) {
     for(let i = 0;i<array2.length;i++){
         result.push(array2[i])
     }
-    console.log(result)
+    return result
 }
 
-mergeArray([1, 3, 2], [4, 1, 3, 2]) // [1, 3, 2, 4, 1, 3, 2]
+console.log(mergeArray([1, 3, 2], [4, 1, 3, 2])) // [1, 3, 2, 4, 1, 3, 2]
 
 
 
@@ -210,7 +208,7 @@ function makeFriends(friends) {
     for(let i = 0;i<friends.length;i++){
         result.push(friends[i].firstName)
     }
-    console.log(result)
+    return result
 }
 
 const myFriends = [
@@ -231,7 +229,7 @@ const myFriends = [
     }
 ]
 
-makeFriends(myFriends) // ["Max", "Lewis", "Daniel"]
+console.log(makeFriends(myFriends)) // ["Max", "Lewis", "Daniel"]
 
 
 
@@ -247,7 +245,7 @@ function findTeamPrincipal(people) {
             result.push(people[i])
         }
     }
-    console.log(result)
+    return result
 }
 
 let somePeople = [
@@ -273,7 +271,7 @@ let somePeople = [
     }
 ]
 
-findTeamPrincipal(somePeople)
+console.log(findTeamPrincipal(somePeople))
 /*
 [
     {
@@ -303,7 +301,7 @@ function findCar(cars, query) {
             result.push(cars[i])
         }
     }
-    console.log(result)
+    return result
 }
 
 let someCars = [
@@ -329,7 +327,7 @@ let someCars = [
     }
 ]
 
-findCar(someCars, "Alpine") 
+console.log(findCar(someCars, "Alpine"))
 /*
 [
     {
@@ -358,9 +356,9 @@ function repeatString(str, num) {
     for(let i = 0;i<num;i++){
         result +=str
     }
-    console.log(result)
+    return result
 }
 
-repeatString("qsdf", 3) // qsdfqsdfqsdf
+console.log(repeatString("qsdf", 3)) // qsdfqsdfqsdf
 
 
